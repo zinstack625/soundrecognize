@@ -1,11 +1,13 @@
 from time import sleep
-import recognizer
+import recorder
 import player
 
 
 recording = []
 samples = 0
 
-(recording, samples) = recognizer.recognize(2)
+(recording, samples) = recorder.record(2)
+
+
+
 player.replay(b''.join(recording))
-sleep(2)
